@@ -9,7 +9,7 @@ Setup virtual environment.
 $ python -m venv .venv
 $ source .venv/bin/activate
 # or
-$ .\\.venv\\Scripts\\Activate.ps1
+$ .venv\Scripts\Activate.ps1
 ```
 
 Install packages.
@@ -19,7 +19,7 @@ python -m pip install sphinx sphinx-favicon furo
 
 Build HTML.
 ```sh
-$ ./docs/make html
+$ docs/make html
 # or
-$ .\\docs\\make.bat html
+$ docs\make.bat html
 ```

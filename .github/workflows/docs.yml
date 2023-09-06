@@ -1,7 +1,7 @@
-name: Docs
+name: docs
 on: [push, pull_request, workflow_dispatch]
 permissions:
-    contents: write
+  contents: write
 jobs:
   docs:
     runs-on: ubuntu-latest
@@ -10,10 +10,10 @@ jobs:
       - uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
-          pip install sphinx sphinx_rtd_theme
+          pip install sphinx sphinx-favicon furo
       - name: Sphinx build
         run: |
-          docs/make html
+          sphinx-build docs _build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
